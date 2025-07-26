@@ -1,99 +1,160 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+  font-size: 16px; /* 1rem = 16px */
 }
-body{
-    background-color: rgb(181, 255, 230);
-    color: #333;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
-}
-section{
-    text-align: center;
-    border: #de0202;
-    padding-top: 15px;
-    padding-bottom: 20px;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-#header{
-    padding: 10px 0 20px 0;
-    font-weight: 900;
-    font-size: xx-large;
+
+body {
+  background-color: rgb(181, 255, 230);
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-#header:hover{
-    color: #230101;
+
+section {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1.25rem;
 }
-button{
-    font-size: large;
-    background-color: #031f4b;
-    color: white;
+
+#header {
+  padding: 0.625rem 0 1.25rem 0;
+  font-weight: 900;
+  font-size: 2rem;
 }
-#form{
-        font-size: x-large;
-        padding-bottom: 50px;
+
+#header:hover {
+  color: #230101;
 }
-#taskInput{
-    box-shadow:0px 0px 2px 2px #360303;
-    border-radius: 20px;
-    padding: 2px 4px;
-    font-size: x-large;
+
+#form {
+  font-size: 1.5rem;
+  padding-bottom: 3.125rem;
 }
+
+#taskInput {
+  box-shadow: 0 0 0.125rem 0.125rem #360303;
+  border-radius: 1.25rem;
+  padding: 0.125rem 0.25rem;
+  font-size: 1.5rem;
+  width: 20%;
+}
+
 button {
-    font-size: large;
-    background-color: #031f4b;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-left: 10px;
-    box-shadow:0px 0px 2px 2px #360303;
+  font-size: 1rem;
+  background-color: #031f4b;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 0.625rem;
+  box-shadow: 0 0 0.125rem 0.125rem #360303;
+}
 
-}
 button:hover {
-    background-color: #ffffff;
-    color: #360303;
-    
+  background-color: #ffffff;
+  color: #360303;
 }
+
 #taskList li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: x-large;
-    background-color: white;
-    padding: 15px;
-    margin: 10px auto;
-    width: 30%;
-    border-radius: 10px;
-    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 1.5rem;
+  background-color: white;
+  padding: 0.9375rem;
+  margin: 0.625rem auto;
+  width: 30%;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
-#check{
-    accent-color:  #031f4b; 
-    height: 20px;
-    width: 17px;
-    margin-top: 7px;
-    cursor: pointer;
+
+#check {
+  accent-color: #031f4b;
+  height: 1.25rem;
+  width: 1.0625rem;
+  margin-top: 0.4375rem;
+  cursor: pointer;
 }
 
 #clear-btn {
-    justify-content: center;
-    background-color: crimson;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 20px;
-    font-size: large;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-left: 45%;
+  justify-content: center;
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 0.625rem 1.25rem;
+  margin-top: 1.25rem;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-left: 45%;
 }
 
 #clear-btn:hover {
-    background-color: darkred;
+  background-color: darkred;
 }
 
-#delete{
-    cursor: pointer;
+#delete {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  #taskList li {
+    width: 60%;
+    font-size: 1.25rem;
+  }
+
+  #taskInput {
+    width: 30%;
+    font-size: 1.25rem;
+  }
+
+  #clear-btn {
+  margin-left: 40%;
+}
+
+  #form {
+    font-size: 1.25rem;
+  }
+
+  #addBtn {
+    width: auto;
+    margin-top: 0.625rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #taskList li {
+    width: 90%;
+    font-size: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #taskInput {
+    width: 60%;
+    font-size: 1rem;
+  }
+
+  #form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
+  }
+
+  #addBtn {
+    margin-left: 0;
+    width: 60%;
+  }
+
+  #clear-btn {
+    width: 40%;
+    margin-left: 30%;
+}
 }
